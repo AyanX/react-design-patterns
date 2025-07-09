@@ -1,0 +1,37 @@
+$color : dodgerblue;
+$white:#fff;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@function fSize($size){
+    @return $size *2
+}
+@mixin sizes($size){
+    color: $white;
+    font-size: fSize($size)
+}
+
+
+div{
+    background-color:$color;
+   
+    ul{
+        border: solid 3px black;
+        padding: 5px;
+        li{
+            list-style: none;
+            border: solid 1px orange;
+            h5{
+               @include sizes(25px)
+            }
+        }
+    }
+    h1{
+        @include sizes(30px)
+    }
+    p{
+        @extend h1
+    }
+}
