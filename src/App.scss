@@ -1,4 +1,4 @@
-$color : dodgerblue;
+$color : rgb(84, 159, 235);
 $white:#fff;
 *{
     box-sizing: border-box;
@@ -14,24 +14,24 @@ $white:#fff;
 }
 
 
-div{
+.app{
     background-color:$color;
-   
-    ul{
-        border: solid 3px black;
-        padding: 5px;
-        li{
-            list-style: none;
-            border: solid 1px orange;
-            h5{
-               @include sizes(25px)
-            }
+    min-height: 100svh;
+    text-align: center;
+    .counter{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    button{
+        padding: 5px 10px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        h3{
+            font-size: 22px;
         }
-    }
-    h1{
-        @include sizes(30px)
-    }
-    p{
-        @extend h1
     }
 }
